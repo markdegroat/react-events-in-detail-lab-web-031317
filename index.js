@@ -6,10 +6,12 @@ import DelayedButton from './components/DelayedButton';
 
 ReactDOM.render(
   <div>
-    <CoordinatesButton />
-    <DelayedButton />
+    <CoordinatesButton onReceiveCoordinates={(arg) => console.log(arg)} />
+    <DelayedButton  onDelayedClick={() => console.log(arguments)}/>
   </div>,
   document.getElementById('main')
 );
+
+
 
 require('./test/index-test.js'); // Leave this in!
